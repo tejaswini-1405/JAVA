@@ -1,5 +1,4 @@
-//Write a program with a method that calculates the factorial of a number using
-//recursion.
+//Write a program to check if a given number is positive, negative, or zero.
 package java_basics;
 
 import java.util.*;
@@ -26,4 +25,5 @@ public class problem1 {
         sc.close();
     }
 }
+
 
