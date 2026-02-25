@@ -1,4 +1,5 @@
-
+//Write a program to demonstrate polymorphism using method overriding with a base
+//class Shape and derived classes Circle and Rectangle.
 package Oops;
 
 class Shape {
@@ -32,3 +33,4 @@ public class Problem3 {
         s2.draw();   
     }
 }
+
