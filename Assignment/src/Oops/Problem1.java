@@ -1,4 +1,5 @@
-
+//Create a class BankAccount with attributes accountNumber and balance, and methods
+//deposit and withdraw. Use encapsulation.
 package Oops;
 
 class Problem1 {
@@ -47,3 +48,4 @@ class Problem1 {
         System.out.println("Balance: " + acc.getBalance());
     }
 }
+
