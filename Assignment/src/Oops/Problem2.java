@@ -1,4 +1,5 @@
-
+//Write a program to demonstrate single inheritance with a base class Animal and
+//derived class Dog.
 package Oops;
 
 class Animal {
@@ -22,4 +23,5 @@ public class Problem2 {
         d.eat();
         d.bark();
     }
+
 }
