@@ -1,4 +1,5 @@
-
+//Write a program with a method that calculates the factorial of a number using
+//recursion.
 package methods;
 
 import java.util.Scanner;
@@ -22,3 +23,4 @@ public class Problem1 {
         sc.close();
     }
 }
+
