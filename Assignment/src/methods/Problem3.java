@@ -1,4 +1,5 @@
-
+//Write a program to demonstrate method overloading by creating multiple methods with
+//the same name but different parameters.
 package methods;
 
 public class Problem3 {
@@ -16,4 +17,5 @@ public class Problem3 {
         System.out.println("Result : " + obj.calcu(10.0, 20.0));
 
     }
+
 }
