@@ -1,4 +1,4 @@
-
+//Write a program with a method that checks whether a given string is a palindrome
 package methods;
 
 import java.util.Scanner;
@@ -31,3 +31,4 @@ class Problem2 {
         sc.close();
     }
 }
+
