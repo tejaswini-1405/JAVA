@@ -1,4 +1,5 @@
-
+//Write a program to print a pyramid pattern using nested loops for a given number of
+//rows.
 package java_basics;
 
 import java.util.Scanner;
@@ -22,4 +23,5 @@ public class problem7 {
         Pattern(n);
         sc.close();
     }
+
 }
