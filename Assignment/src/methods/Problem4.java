@@ -1,4 +1,5 @@
-
+//Write a program that uses a default constructor and a parameterized constructor to
+//initialize objects of a class Student.
 package methods;
 
 public class Problem4 {
@@ -27,3 +28,4 @@ public class Problem4 {
         s2.display();
     }
 }
+
