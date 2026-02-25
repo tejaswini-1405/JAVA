@@ -1,3 +1,5 @@
+//Write a program to find the sum of all even numbers between 1 and 100 using a while
+//loop.
 package java_basics;
 
 public class problem5 {
@@ -12,4 +14,5 @@ public class problem5 {
         }
         System.out.println("Sum :"+sum);
     }
+
 }
