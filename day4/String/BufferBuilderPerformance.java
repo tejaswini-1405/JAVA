@@ -1,0 +1,27 @@
+
+package String;
+
+
+public class BufferBuilderPerformance {
+
+    
+    public static void main(String[] args) {
+        long startTime=System.currentTimeMillis();
+        StringBuffer buffer =new StringBuffer("Java");
+        for(int i=1;i<100000;i++){
+            buffer.append("DSA");
+            
+        }
+        System.out.println("Buffer time:" + (System.currentTimeMillis() - startTime) + "ms");
+        startTime=System.currentTimeMillis();
+        StringBuilder builder =new StringBuilder("Java");
+        for(int i=1;i<100000;i++){
+            buffer.append("DSA");
+            
+        }
+        System.out.println("Builder time:" + (System.currentTimeMillis() - startTime) + "ms");
+        
+    }
+    
+}
+//stringBuilder will take less time to execute than string buffer hence the string builder is besttttt
