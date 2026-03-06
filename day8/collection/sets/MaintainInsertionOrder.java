@@ -1,0 +1,17 @@
+package DSA.collection.sets;
+import java.util.*;//importat
+public class MaintainInsertionOrder {
+    public static void main(String[] args) {
+        HashSet<Integer> set=new LinkedHashSet<>();//if we give just HashSet it will not maintain the order
+        set.add(2);
+        set.add(3);
+        set.add(2);
+        set.add(3);
+        set.add(12);
+        set.add(31);
+        set.add(21);
+        set.add(32);
+        System.out.println(set);
+
+    }
+}
