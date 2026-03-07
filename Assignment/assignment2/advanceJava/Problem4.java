@@ -1,0 +1,13 @@
+//Write a program to reverse a string using StringBuilder.
+package assignment2.advanceJava;
+
+public class Problem4 {
+        public static void main(String[] args) {
+            String str = "Hello";
+            StringBuilder sb = new StringBuilder(str);
+            sb.reverse();
+            System.out.println("Original String: " + str);
+            System.out.println("Reversed String: " + sb);
+        }
+    }
+
