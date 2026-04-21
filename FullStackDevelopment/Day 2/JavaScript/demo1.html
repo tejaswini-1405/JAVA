@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript example</title>
+</head>
+<body>
+    <h2 id="welcome">Hello Students!!!!</h2>
+    <!--Inline Javascript is written inside the html just before 
+    the body tag closing inside <script> tag-->
+        <script>
+            //inline script:because we are inside the same HTML file
+            document.getElementById("welcome").innerText = "Welcome to JS";
+            //Variable [let,var,const]
+            // JS is a DTL(dynamically typed language)[similar to pyhton]
+            let name='Teju';//string
+            let age=21;//constant
+            const PI=3.14;//boolean
+            let isStudent=true;//boolean
+            console.log(name,age,PI,isStudent);
+            var x=22; //very old syntax & nowadays we don't use it
+            // operators 
+            let a=10,b=20;
+            console.log(a+b);//arithmetic -> 30
+            console.log(a>b);//comparison-> false
+            console.log(a>5 && b<30);//logical -> true
+            //functions
+            function displayName(name){
+                return "Hello " + name + "!";
+            }
+            //function call
+            console.log(displayName('Tejaswini'));//hello tejaswini
+            //Function to add two numbers
+            function addTwoNumbers(a,b){
+                return a+b;
+            }
+            const result=addTwoNumbers(10,20);
+            console.log("the sum is:" + result);
+            //Create a function to find the area of a circle
+            function areaOfCircle(r){
+                const PI=3.14;
+                return PI*r*r;
+            }
+            console.log("Area: " + areaOfCircle(7) + "sq.units");
+        </script>
+</body>
+</html>

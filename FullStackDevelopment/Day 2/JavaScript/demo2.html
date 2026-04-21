@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <p id="demo">This is the original text.</p>
+    <button onclick="changeText()">Cick me</button>
+    <!--Example of button event/EVENT in jS-->
+    <button id="btn">Hover over me</button>
+    <script>
+        function changeText(){
+            document.getElementById("demo").innerText="Text changed";
+             document.getElementById("demo").style.color="red";
+        }
+        document.getElementById("btn").onmouseover=function(){
+            alert('you hovered over the button!');
+        };
+    </script>
+</body>
+</html>

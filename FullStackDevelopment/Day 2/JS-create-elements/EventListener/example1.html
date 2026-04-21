@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <p id="text"></p>
+    <button id="colorBtn">Change Color 🎨</button>
+    <hr/>
+    <input  id="inputBox" placeholder="Type Something" />
+    <p id="output"></p>
+    <script>
+        //Changing text
+        let btn=document.getElementById("btn");
+        btn.addEventListener("click",
+            function(){
+                document.getElementById("text").innerText="Button Clicked";
+
+            });
+            //changing the background color
+            let btnClr=document.getElementById("colorBtn");
+        btnClr.addEventListener("click",function(){
+                document.body.style.backgroundColor= "lightblue";
+
+            });
+            let input=document.getElementById("inputBox");
+            input.addEventListener("keyup",
+                function(){
+                    document.getElementById("output").innerText=input.value;
+                }
+            );
+    </script>
+</body>
+</html>
