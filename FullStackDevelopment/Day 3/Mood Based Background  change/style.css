@@ -1,0 +1,32 @@
+body{
+    height:100vh;
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: pink;
+    transition:all 0.6s ease; /*Make the chnages / animations smooth*/
+}
+.card{
+    background: purple;
+    padding:40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0,0, 0.2); /* soft shadow*/
+    color:beige;
+
+}
+button{
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background: #eee;
+    transition: 0.3s;/*Smoothness*/
+}
+button:hover{
+    transform: translateY(-5px);
+    background: #ddd;
+}

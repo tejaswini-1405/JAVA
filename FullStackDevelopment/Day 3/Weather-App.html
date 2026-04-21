@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App Using OpenWeather API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow p-4 text-center" style="width: 320px">
+      <h4 class="mb-3">🌦️ Weather</h4>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          id="city"
+          class="form-control"
+          placeholder="Enter city"
+          onkeypress="if (event.key === 'Enter') getWeather();"
+        />
+        <button onclick="getWeather()" class="btn btn-primary">Search</button>
+      </div>
+      <h5 id="result" class="mb-5">--</h5>
+      <small id="time" class="text-muted"></small>
+    </div>
+    <script>
+      let apiKey = "5bfcafa866d76abbcec55f55a867061a";
+      async function getWeather() {
+        let city = document.getElementById("city").value;
+        if (city === "") {
+          document.getElementById("result").innerText = "Enter city";
+          return;
+        }
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        try {
+          let res = await fetch(url);
+          let data = await res.json(); // {key : value} pair
+          if (data.cod != 200) {
+            document.getElementById("city").innerText = "City not found!";
+            return;
+          }
+          // 🌦️ Conditions
+          let condition = data.weather[0].main;
+          let icon = "🌤️";
+          if (condition === "Clear") icon = "☀️";
+          else if (condition === "Rain") icon = "🌧️";
+          else if (condition === "Clouds") icon = "☁️";
+          else if (condition === "Snow") icon = "❄️";
+          else if (condition === "Thunderstorm") icon = "⛈️";
+
+          document.getElementById("result").innerText =
+            icon + " " + data.name + " : " + data.main.temp + "°C";
+        } catch (e) {
+          document.getElementById("result").innerText = "Error";
+        }
+      }
+      // 📅⏱️
+      function updateTime() {
+        let now = new Date();
+        let options = {
+          timeZone: "Asia/Kolkata",
+          weekday: "short",
+          day: "numeric",
+          month: "short",
+          hour: "2-digit",
+          minute: "2-digit",
+        };
+        document.getElementById("time").innerText = now.toLocaleString("en-IN", options);
+      }
+      setInterval(updateTime, 1000);
+      updateTime();
+    </script>
+  </body>
+</html>
